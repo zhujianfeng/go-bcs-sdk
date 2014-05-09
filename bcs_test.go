@@ -1,16 +1,15 @@
 package bcs
 
 import (
-	//"fmt"
+	"fmt"
 	"testing"
 )
 
-const AK string = "G1HvMoOfTqhrEpmdGM5GXC"
-const SK string = "TJztiP1YXmlB1GVgnCkSpDZ39T9"
-const HOST string = "bcs-sandbox.baidu.com"
-const PUBHOST string = "bcs-sandbox.baidu.com"
+const AK string = ""
+const SK string = ""
+const HOST string = ""
+const PUBHOST string = ""
 
-/*
 func TestFormatSign(t *testing.T) {
 	bcs := NewBaiduBcs(AK, SK, HOST, PUBHOST)
 	opt := make(map[string]string)
@@ -54,7 +53,7 @@ func TestCreateObjectByText(t *testing.T) {
 	_, _, url := bcs.CreateObjectByText("uaq-hijack-files", "/11.json", "/Users/zhujianfeng/Desktop/1.jpg")
 	fmt.Println(url)
 }
-*/
+
 func TestGetObjectAndSave(t *testing.T) {
 	bcs := NewBaiduBcs(AK, SK, HOST, PUBHOST)
 	opt := make(map[string]string)

@@ -6,7 +6,6 @@ import (
 	"crypto/sha1"
 	"encoding/base64"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -116,7 +115,7 @@ func (bcs *BaiduBcs) CreateObject(bucket, object string, body []byte) (int, map[
 }
 
 //根据文件路径创建object
-func (bcs *BaiduBcs) CreateObjectByFile(bucket string, object string, path string) (int, map[string][]string, string) {
+func (bcs *BaiduBcs) CreateObjectByFile(bucket, object, path string) (int, map[string][]string, string) {
 	body, err := ioutil.ReadFile(path)
 	if err != nil {
 		return 0, nil, ""
@@ -125,7 +124,7 @@ func (bcs *BaiduBcs) CreateObjectByFile(bucket string, object string, path strin
 }
 
 //根据文本内容创建object
-func (bcs *BaiduBcs) CreateObjectByText(bucket string, object string, text string) (int, map[string][]string, string) {
+func (bcs *BaiduBcs) CreateObjectByText(bucket, object, text string) (int, map[string][]string, string) {
 	body := []byte(text)
 	return bcs.CreateObject(bucket, object, body)
 }
